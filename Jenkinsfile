@@ -9,11 +9,8 @@ node {
     }
     stage('Build') { 
         echo "Running build"
-        dir (".\\sonarqube-scanner-msbuild\\CSharpProject\\") {
-            bat 'C:\\Users\\admin\\Downloads\\sonar-scanner-msbuild-4.4.2.1543-net46\\SonarQube.Scanner.MSBuild.exe begin /k:\"icare_teste1\" /d:sonar.host.url=\"http://localhost:9000\" /d:sonar.login=\"1c4fe35571a9acb83c8d0a5a8addf9a2ac6c8d5c\"'
-            bat 'C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe /t:Rebuild /p:Configuration=Release;OutDir=C:\\custom_build_out'
-            bat 'C:\\Users\\admin\\Downloads\\sonar-scanner-msbuild-4.4.2.1543-net46\\SonarQube.Scanner.MSBuild.exe end /d:sonar.login=\"1c4fe35571a9acb83c8d0a5a8addf9a2ac6c8d5c\"'
-        }
+        bat '/usr/share/dotnet'
+                    }
     }
     stage('Packaging'){
         echo "Running packaging tool"

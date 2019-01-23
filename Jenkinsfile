@@ -1,10 +1,10 @@
 node { 
     parameters {
-        string(name: 'branch_to_build', defaultValue: 'master', description: 'Repo branch to build from')
+        string(name: 'branch_to_build', defaultValue: 'master')
     }
     stage('Clone repo') {
         //bat "git config core.longpaths true"
-        git branch: "${branch_to_build}", credentialsId: "${credentials_to_use}", url: "${repo_url}"
+        git branch: {dotnetcore-testproj}, url: {https://github.com/claudia-pimentel/dotnetcore-testproj}
     }
     stage('Build') { 
         echo "Running build"

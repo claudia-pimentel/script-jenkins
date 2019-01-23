@@ -8,7 +8,7 @@ node {
     }
     stage('Build') { 
         echo "Running build"
-        shell '/usr/share/dotnet'
+        sh '/usr/share/dotnet'
                     }
     stage('Packaging'){
         echo "Running packaging tool"

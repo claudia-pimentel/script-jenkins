@@ -1,5 +1,11 @@
-agent { node { label 'agent-01' } { 
-    parameters {
+pipeline
+{
+    agent 
+    { 
+        node 
+        { label 'agent-01' }
+        { 
+            parameters {
         string(name: 'branch_to_build', defaultValue: 'master')
     }
     stage('Clone repo') {
@@ -10,5 +16,6 @@ agent { node { label 'agent-01' } {
         echo "Running build"
         sh 'dotnet test'
                     }
+        }
+    }
 }
-      }

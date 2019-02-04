@@ -14,8 +14,8 @@ pipeline
     stage('Build') { 
         steps{
         echo "Running build"
-        sh 'dotnet test'
             }
                     }
     }
 }
+"

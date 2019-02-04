@@ -1,4 +1,4 @@
-node { 
+agent { node { label 'agent-01' } { 
     parameters {
         string(name: 'branch_to_build', defaultValue: 'master')
     }

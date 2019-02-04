@@ -1,8 +1,7 @@
 pipeline
 {
     agent 
-    { 
-        node ('agent-01')
+    { node ('agent-01')}
         { 
             parameters {
         string(name: 'branch_to_build', defaultValue: 'master')
@@ -15,6 +14,5 @@ pipeline
         echo "Running build"
         sh 'dotnet test'
                     }
-        }
     }
 }

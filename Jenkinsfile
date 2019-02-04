@@ -1,11 +1,10 @@
 pipeline
-{
-    agent 
-    { node ('agent-01')}
-        { 
+{ 
+    agent { node ('agent-01')} 
             parameters {
         string(name: 'branch_to_build', defaultValue: 'master')
     }
+    stages{
     stage('Clone repo') {
         //bat "git config core.longpaths true"
         git branch: "master", url: "https://github.com/claudia-pimentel/dotnetcore-testproj"

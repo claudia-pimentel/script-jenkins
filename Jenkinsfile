@@ -11,3 +11,4 @@ agent { node { label 'agent-01' } {
         sh 'dotnet test'
                     }
 }
+      }

@@ -1,6 +1,6 @@
 pipeline
 { 
-    agent { node ('agent-01')} 
+    agent { node ('agent-02')} 
             parameters {
         string(name: 'branch_to_build', defaultValue: 'master')
     }
